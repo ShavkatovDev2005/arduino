@@ -13,7 +13,7 @@ void loop() {
     ibus[idx++] = b;
     if (idx == IBUS_BUFFSIZE) {
       idx = 0;
-      // Har kanal 2 baytdan -> 14 ta kanal bor
+      
       for (int i = 0; i < 10; i++) {
         int ch = ibus[2*i+2] | (ibus[2*i+3] << 8);
         Serial.print("CH"); Serial.print(i+1);
